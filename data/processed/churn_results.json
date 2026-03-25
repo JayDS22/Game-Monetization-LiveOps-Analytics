@@ -1,0 +1,143 @@
+{
+  "model_comparison": {
+    "xgboost": {
+      "auc": 1.0,
+      "ap": 1.0
+    },
+    "lightgbm": {
+      "auc": 1.0,
+      "ap": 1.0
+    },
+    "best": "XGBoost"
+  },
+  "shap_importance": [
+    {
+      "feature": "days_since_last_active",
+      "mean_abs_shap": 10.858868598937988
+    },
+    {
+      "feature": "max_stage_reached",
+      "mean_abs_shap": 0.0834515392780304
+    },
+    {
+      "feature": "total_sessions",
+      "mean_abs_shap": 0.03539462387561798
+    },
+    {
+      "feature": "engagement_ratio",
+      "mean_abs_shap": 0.013312757946550846
+    },
+    {
+      "feature": "stage_per_session",
+      "mean_abs_shap": 0.007996099069714546
+    },
+    {
+      "feature": "total_play_hours",
+      "mean_abs_shap": 0.007086958270519972
+    },
+    {
+      "feature": "session_frequency",
+      "mean_abs_shap": 0.006829659454524517
+    },
+    {
+      "feature": "play_intensity",
+      "mean_abs_shap": 0.004029732663184404
+    },
+    {
+      "feature": "days_active",
+      "mean_abs_shap": 0.003960803616791964
+    },
+    {
+      "feature": "stage_per_hour",
+      "mean_abs_shap": 0.0033097604755312204
+    },
+    {
+      "feature": "stage_velocity",
+      "mean_abs_shap": 0.0027456285897642374
+    },
+    {
+      "feature": "avg_session_minutes",
+      "mean_abs_shap": 0.0026728908997029066
+    },
+    {
+      "feature": "max_play_streak",
+      "mean_abs_shap": 0.0025505779776722193
+    },
+    {
+      "feature": "age",
+      "mean_abs_shap": 0.00251628365367651
+    },
+    {
+      "feature": "days_since_install",
+      "mean_abs_shap": 0.0023871827870607376
+    }
+  ],
+  "risk_distribution": {
+    "Critical": 227581,
+    "Low": 82419,
+    "Medium": 0,
+    "High": 0
+  },
+  "recommendations": [
+    {
+      "segment": "High-value at-risk (whales/dolphins, churn_prob > 0.6)",
+      "count": 1413,
+      "action": "VIP personal outreach + exclusive limited-time offers",
+      "priority": "CRITICAL"
+    },
+    {
+      "segment": "Inactive 3-5 days",
+      "count": 41166,
+      "action": "Push notification with comeback bonus (free gems/energy)",
+      "priority": "HIGH"
+    },
+    {
+      "segment": "Tutorial dropoffs (no tutorial completion, sessions > 0)",
+      "count": 75189,
+      "action": "Simplified onboarding flow + tutorial skip option",
+      "priority": "MEDIUM"
+    },
+    {
+      "segment": "Minnows at risk of churning (low spend, high churn prob)",
+      "count": 5652,
+      "action": "Targeted discount: 30% off first IAP bundle > $4.99",
+      "priority": "HIGH"
+    },
+    {
+      "segment": "Engaged non-payers (high sessions, zero spend)",
+      "count": 192292,
+      "action": "Starter pack popup at session milestone (limited offer)",
+      "priority": "MEDIUM"
+    }
+  ],
+  "alert_thresholds": {
+    "dau_drop_pct": 10,
+    "d1_retention_min": 0.35,
+    "d7_retention_min": 0.12,
+    "arpu_drop_pct": 15,
+    "conversion_rate_min": 0.02,
+    "whale_churn_count": 5
+  },
+  "current_metrics": {
+    "dau_estimate": 27556,
+    "mau_estimate": 212069,
+    "d1_retention": 0.4855,
+    "d7_retention": 0.1498,
+    "d30_retention": 0.0386,
+    "arpu": 0.6465,
+    "arppu": 20.35,
+    "conversion_rate": 0.0318,
+    "whale_pct": 0.095,
+    "whales_at_critical_risk": 204
+  },
+  "confusion_matrix": [
+    [
+      16484,
+      0
+    ],
+    [
+      0,
+      45516
+    ]
+  ]
+}

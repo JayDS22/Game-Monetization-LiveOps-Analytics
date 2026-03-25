@@ -1,0 +1,126 @@
+{
+  "cookie_cats": {
+    "d1_retention": {
+      "p_a": 0.5193755535872453,
+      "p_b": 0.5186440677966102,
+      "diff": 0.0007314857906350891,
+      "relative_lift": 0.0014103810995905312,
+      "z_stat": 0.21960314645428597,
+      "p_value": 0.8261802407128833,
+      "se": 0.0033309440344806715,
+      "significant": false
+    },
+    "d7_retention": {
+      "p_a": 0.21729406554472985,
+      "p_b": 0.21112845673505798,
+      "diff": 0.006165608809671874,
+      "relative_lift": 0.02920311598454493,
+      "z_stat": 2.2541475953242887,
+      "p_value": 0.024186884290398503,
+      "se": 0.0027352285282742856,
+      "significant": true
+    },
+    "bootstrap_ci": {
+      "lower": 0.0007443452124629144,
+      "upper": 0.01144193032761302,
+      "mean_diff": 0.006136959501315177
+    }
+  },
+  "power_analysis": [
+    {
+      "scenario": "D1 Retention (baseline=52%)",
+      "baseline": 0.52,
+      "mde": 0.01,
+      "n_per_group": 39170
+    },
+    {
+      "scenario": "D1 Retention (baseline=52%)",
+      "baseline": 0.52,
+      "mde": 0.02,
+      "n_per_group": 9789
+    },
+    {
+      "scenario": "D1 Retention (baseline=52%)",
+      "baseline": 0.52,
+      "mde": 0.03,
+      "n_per_group": 4349
+    },
+    {
+      "scenario": "D1 Retention (baseline=52%)",
+      "baseline": 0.52,
+      "mde": 0.05,
+      "n_per_group": 1564
+    },
+    {
+      "scenario": "D7 Retention (baseline=21%)",
+      "baseline": 0.21,
+      "mde": 0.01,
+      "n_per_group": 26177
+    },
+    {
+      "scenario": "D7 Retention (baseline=21%)",
+      "baseline": 0.21,
+      "mde": 0.02,
+      "n_per_group": 6577
+    },
+    {
+      "scenario": "D7 Retention (baseline=21%)",
+      "baseline": 0.21,
+      "mde": 0.03,
+      "n_per_group": 2937
+    },
+    {
+      "scenario": "D7 Retention (baseline=21%)",
+      "baseline": 0.21,
+      "mde": 0.05,
+      "n_per_group": 1067
+    },
+    {
+      "scenario": "Conversion Rate (baseline=3.2%)",
+      "baseline": 0.032,
+      "mde": 0.005,
+      "n_per_group": 19884
+    },
+    {
+      "scenario": "Conversion Rate (baseline=3.2%)",
+      "baseline": 0.032,
+      "mde": 0.01,
+      "n_per_group": 5076
+    },
+    {
+      "scenario": "Conversion Rate (baseline=3.2%)",
+      "baseline": 0.032,
+      "mde": 0.015,
+      "n_per_group": 2301
+    },
+    {
+      "scenario": "Conversion Rate (baseline=3.2%)",
+      "baseline": 0.032,
+      "mde": 0.02,
+      "n_per_group": 1319
+    }
+  ],
+  "cuped_experiment": {
+    "raw": {
+      "diff": 0.20003434443406576,
+      "se": 0.014306584282074881,
+      "p_value": 3.4308053248353774e-44
+    },
+    "cuped": {
+      "diff": 0.20585633616342092,
+      "se": 0.010277390238835522,
+      "p_value": 2.500338605646681e-88
+    },
+    "variance_reduction": 0.4786775560460068,
+    "true_effect": 0.08
+  },
+  "bayesian": {
+    "prob_a_better": 0.98755,
+    "expected_loss_a": 1.2001329488483447e-05,
+    "expected_loss_b": 0.006174042199204891,
+    "credible_interval": [
+      0.000803217291831817,
+      0.011528246740501449
+    ]
+  }
+}

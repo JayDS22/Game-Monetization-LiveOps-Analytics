@@ -1,0 +1,181 @@
+{
+  "funnel": [
+    {
+      "stage": "Install",
+      "count": 310000,
+      "pct_of_install": 100.0,
+      "pct_of_previous": 100.0,
+      "dropoff_rate": 0.0
+    },
+    {
+      "stage": "Tutorial Complete",
+      "count": 234809,
+      "pct_of_install": 75.74,
+      "pct_of_previous": 75.74,
+      "dropoff_rate": 24.26
+    },
+    {
+      "stage": "D1 Retained",
+      "count": 150500,
+      "pct_of_install": 48.55,
+      "pct_of_previous": 64.09,
+      "dropoff_rate": 35.91
+    },
+    {
+      "stage": "D7 Retained",
+      "count": 46438,
+      "pct_of_install": 14.98,
+      "pct_of_previous": 30.86,
+      "dropoff_rate": 69.14
+    },
+    {
+      "stage": "D30 Retained",
+      "count": 11967,
+      "pct_of_install": 3.86,
+      "pct_of_previous": 25.77,
+      "dropoff_rate": 74.23
+    },
+    {
+      "stage": "First IAP",
+      "count": 9851,
+      "pct_of_install": 3.18,
+      "pct_of_previous": 82.32,
+      "dropoff_rate": 17.68
+    },
+    {
+      "stage": "Repeat Purchaser (2+)",
+      "count": 8777,
+      "pct_of_install": 2.83,
+      "pct_of_previous": 89.1,
+      "dropoff_rate": 10.9
+    },
+    {
+      "stage": "High Value (5+ purchases)",
+      "count": 2517,
+      "pct_of_install": 0.81,
+      "pct_of_previous": 28.68,
+      "dropoff_rate": 71.32
+    }
+  ],
+  "time_to_convert": {
+    "median_days": 4.0,
+    "mean_days": 6.379555375088824,
+    "p25_days": 2.0,
+    "p75_days": 9.0,
+    "distribution": {
+      "Day 0-1": 1141,
+      "Day 2-3": 1843,
+      "Day 4-7": 2487,
+      "Day 8-14": 1997,
+      "Day 15-30": 994,
+      "Day 31-90": 100,
+      "Day 91+": 0
+    }
+  },
+  "friction_tests": {
+    "tutorial_p": 0.7358106144145116,
+    "d1_retention_p": 0.9346607415283664,
+    "fb_connected_p": 0.3098832563510901
+  },
+  "logistic_regression": {
+    "accuracy": 0.9682225806451613,
+    "coefficients": [
+      {
+        "feature": "country_CN",
+        "coefficient": 0.05860898260734747,
+        "odds_ratio": 1.0603605402541696
+      },
+      {
+        "feature": "country_KR",
+        "coefficient": 0.030138862503173373,
+        "odds_ratio": 1.0305976353849895
+      },
+      {
+        "feature": "country_CA",
+        "coefficient": 0.027971001132171915,
+        "odds_ratio": 1.0283658625432999
+      },
+      {
+        "feature": "country_JP",
+        "coefficient": 0.01669600633041691,
+        "odds_ratio": 1.0168361635797394
+      },
+      {
+        "feature": "max_stage_reached",
+        "coefficient": 0.009327533471498688,
+        "odds_ratio": 1.0093711704815285
+      },
+      {
+        "feature": "country_DE",
+        "coefficient": 0.007130800578285047,
+        "odds_ratio": 1.0071562852761484
+      },
+      {
+        "feature": "gender_enc",
+        "coefficient": 0.0037691607181816874,
+        "odds_ratio": 1.003776272937333
+      },
+      {
+        "feature": "age",
+        "coefficient": -0.00025933899801177973,
+        "odds_ratio": 0.9997406946274393
+      },
+      {
+        "feature": "total_sessions",
+        "coefficient": -0.00044456027598068816,
+        "odds_ratio": 0.9995555385262971
+      },
+      {
+        "feature": "country_UK",
+        "coefficient": -0.004764945602907224,
+        "odds_ratio": 0.9952463887407357
+      },
+      {
+        "feature": "platform_enc",
+        "coefficient": -0.005055950679528574,
+        "odds_ratio": 0.9949568091257356
+      },
+      {
+        "feature": "fb_connected",
+        "coefficient": -0.02286857672006295,
+        "odds_ratio": 0.9773909272543009
+      },
+      {
+        "feature": "country_BR",
+        "coefficient": -0.023888484040439525,
+        "odds_ratio": 0.9763945872663152
+      },
+      {
+        "feature": "country_US",
+        "coefficient": -0.040047539344624086,
+        "odds_ratio": 0.9607437649377338
+      },
+      {
+        "feature": "d1_retained",
+        "coefficient": -0.04211547628459766,
+        "odds_ratio": 0.9587590602457201
+      },
+      {
+        "feature": "tutorial_completed",
+        "coefficient": -0.04498126560316534,
+        "odds_ratio": 0.9560153920370654
+      }
+    ]
+  },
+  "platform_conversion": {
+    "Android": 0.0318841259877626,
+    "iOS": 0.03164706641154086
+  },
+  "country_conversion": {
+    "SG": 0.03608923884514436,
+    "CN": 0.03364294200237607,
+    "CA": 0.032683269407379395,
+    "JP": 0.03267361895844768,
+    "KR": 0.03256960439649251,
+    "MX": 0.03230212936922459,
+    "DE": 0.03181163795105187,
+    "IN": 0.03162814520775978,
+    "UK": 0.03144553184662281,
+    "ID": 0.031407563025210083
+  }
+}

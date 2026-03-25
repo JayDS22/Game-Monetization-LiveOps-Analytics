@@ -1,0 +1,99 @@
+{
+  "silhouette_scores": {
+    "2": 0.2364,
+    "3": 0.2531,
+    "4": 0.2426,
+    "5": 0.1491,
+    "6": 0.151,
+    "7": 0.1468
+  },
+  "inertias": {
+    "2": 684646.32,
+    "3": 602089.86,
+    "4": 546359.87,
+    "5": 507672.13,
+    "6": 476367.21,
+    "7": 444426.02
+  },
+  "best_k": 3,
+  "cluster_profiles": [
+    {
+      "kmeans_cluster": 0,
+      "count": 109003,
+      "avg_sessions": 101.239,
+      "avg_spend": 0.0,
+      "payer_rate": 0.0,
+      "avg_retention_d7": 0.202,
+      "avg_stage": 72.912,
+      "avg_engagement": 0.279
+    },
+    {
+      "kmeans_cluster": 1,
+      "count": 191162,
+      "avg_sessions": 47.096,
+      "avg_spend": 0.0,
+      "payer_rate": 0.0,
+      "avg_retention_d7": 0.12,
+      "avg_stage": 33.099,
+      "avg_engagement": 0.132
+    },
+    {
+      "kmeans_cluster": 2,
+      "count": 9835,
+      "avg_sessions": 73.542,
+      "avg_spend": 20.376,
+      "payer_rate": 1.0,
+      "avg_retention_d7": 0.157,
+      "avg_stage": 52.932,
+      "avg_engagement": 0.203
+    }
+  ],
+  "tier_revenue": [
+    {
+      "player_tier": "dolphin",
+      "n_players": 1675,
+      "total_rev": 54349.84,
+      "avg_rev": 32.447665671641786,
+      "pct_players": 0.54,
+      "pct_revenue": 27.12
+    },
+    {
+      "player_tier": "free_rider",
+      "n_players": 300149,
+      "total_rev": 0.0,
+      "avg_rev": 0.0,
+      "pct_players": 96.82,
+      "pct_revenue": 0.0
+    },
+    {
+      "player_tier": "minnow",
+      "n_players": 7880,
+      "total_rev": 37636.93,
+      "avg_rev": 4.776260152284264,
+      "pct_players": 2.54,
+      "pct_revenue": 18.78
+    },
+    {
+      "player_tier": "whale",
+      "n_players": 296,
+      "total_rev": 108434.09,
+      "avg_rev": 366.3313851351351,
+      "pct_players": 0.1,
+      "pct_revenue": 54.1
+    }
+  ],
+  "rfm_distribution": {
+    "At Risk High Value": 2285,
+    "New Payers": 1531,
+    "Champions": 1269,
+    "Low Spend Active": 1241,
+    "Churning": 1187,
+    "Potential Loyalists": 967,
+    "Loyal Whales": 915,
+    "Lapsed Whales": 456
+  },
+  "pca_variance_explained": [
+    0.30664433480134123,
+    0.13016598945248165
+  ]
+}
