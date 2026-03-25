@@ -1,11 +1,14 @@
-# 🎮 Game Monetization & Live-Ops Analytics Platform
+# Game Monetization & Live-Ops Analytics Platform
 
-**End-to-end F2P game analytics platform built on 300K+ synthetic players: whale detection, LTV forecasting, churn prediction, A/B testing, and live-ops dashboards.**
+**End-to-end F2P game analytics platform built on 310K+ players: whale detection, LTV forecasting, churn prediction, A/B testing, and live-ops dashboards.**
 
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://ukti6zgqjjpytjxkvbgx7k.streamlit.app/)
 [![Python](https://img.shields.io/badge/Python-3.10+-3776AB?logo=python&logoColor=white)](https://python.org)
 [![XGBoost](https://img.shields.io/badge/XGBoost-ML-orange)](https://xgboost.readthedocs.io/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-FF4B4B?logo=streamlit)](https://streamlit.io)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
+## [Live Demo → Click here to explore the dashboard](https://ukti6zgqjjpytjxkvbgx7k.streamlit.app/)
 
 ---
 
@@ -27,7 +30,7 @@ This platform demonstrates production-grade data science for free-to-play game m
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -70,12 +73,12 @@ This platform demonstrates production-grade data science for free-to-play game m
 
 ---
 
-## 📊 Key Results
+## Key Results
 
 ### Monetization Metrics
 - **310,000** players analyzed across 15 countries
 - **3.2%** F2P-to-payer conversion rate
-- **$301K** total revenue from 34,661 transactions
+- **$200K+** total revenue from 34,661 transactions
 - **Whales (0.1% of payers) drive 54% of revenue** — classic F2P Pareto distribution
 
 ### Model Performance
@@ -98,16 +101,16 @@ This platform demonstrates production-grade data science for free-to-play game m
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 ```bash
-pip install pandas numpy scikit-learn xgboost lightgbm lifetimes lifelines shap scipy statsmodels streamlit plotly matplotlib seaborn
+pip install -r requirements.txt
 ```
 
 ### Run the Full Pipeline
 ```bash
-# 1. Generate synthetic data (300K+ players)
+# 1. Generate synthetic data (310K+ players)
 python src/ingestion/generate_data.py
 
 # 2. Feature engineering (59+ features)
@@ -132,23 +135,25 @@ python src/churn/churn_prediction.py
 streamlit run src/dashboard/app.py
 ```
 
+### Or just view the live dashboard
+No setup needed — [**open the live demo →**](https://ukti6zgqjjpytjxkvbgx7k.streamlit.app/)
+
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 Game-Monetization-LiveOps-Analytics/
 ├── README.md
 ├── requirements.txt
+├── .streamlit/
+│   └── config.toml                  # Dark theme configuration
 ├── data/
 │   ├── raw/
 │   │   ├── players.csv              # 310K player profiles
 │   │   ├── transactions.csv         # 34K+ IAP transactions
 │   │   └── cookie_cats_ab.csv       # 90K A/B test records
 │   └── processed/
-│       ├── master_features.csv      # 67-column feature table
-│       ├── segmented_players.csv    # With cluster labels
-│       ├── churn_scores.csv         # Churn probabilities
 │       ├── segmentation_results.json
 │       ├── funnel_results.json
 │       ├── ltv_results.json
@@ -198,7 +203,7 @@ Game-Monetization-LiveOps-Analytics/
 - **Bayesian**: Beta-Binomial conjugate model with 100K posterior samples. Reports P(A>B) and expected loss
 
 ### Churn Prediction
-- **XGBoost + LightGBM** ensemble with SHAP explainability
+- **XGBoost + LightGBM** with SHAP explainability
 - **Per-player SHAP waterfall** plots showing top 3 churn reasons
 - **Risk tiering**: Low / Medium / High / Critical with targeted intervention recommendations
 
@@ -217,7 +222,7 @@ This project uses the exact vocabulary and metrics that F2P game data science te
 
 ---
 
-## 📦 Datasets
+## Datasets
 
 | Dataset | Inspired By | Records | Description |
 |---------|-------------|---------|-------------|
@@ -229,7 +234,7 @@ All data is synthetically generated with realistic F2P distributions (power-law 
 
 ---
 
-## 🛠️ Technologies
+## Technologies
 
 **Languages & Libraries**: Python, SQL, Pandas, NumPy, SciPy, Scikit-learn
 
@@ -241,7 +246,7 @@ All data is synthetically generated with realistic F2P distributions (power-law 
 
 ---
 
-## 📄 License
+## License
 
 MIT License — see [LICENSE](LICENSE) for details.
 
