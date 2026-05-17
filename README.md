@@ -12,7 +12,7 @@
 
 ---
 
-## 📋 Project Overview
+## Project Overview
 
 This platform demonstrates production-grade data science for free-to-play game monetization — the exact analytical stack used by studios like Tencent, Supercell, and Zynga to optimize player lifetime value and live-ops decisions.
 
@@ -32,43 +32,24 @@ This platform demonstrates production-grade data science for free-to-play game m
 
 ## Architecture
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│                    DATA SOURCES                              │
-│  ┌──────────────┐ ┌──────────────┐ ┌──────────────────────┐ │
-│  │ Players (310K)│ │ IAP Txns (35K)│ │ A/B Test (90K)     │ │
-│  └──────┬───────┘ └──────┬───────┘ └──────────┬───────────┘ │
-└─────────┼────────────────┼─────────────────────┼─────────────┘
-          │                │                     │
-          ▼                ▼                     ▼
-┌─────────────────────────────────────────────────────────────┐
-│              FEATURE ENGINEERING PIPELINE                     │
-│  59+ features: RFM, engagement, spending, progression,       │
-│  demographics, retention scores, social multipliers          │
-│  SQL views: vw_daily_kpis, vw_cohort_retention, etc.        │
-└──────────────────────────┬──────────────────────────────────┘
-                           │
-          ┌────────────────┼────────────────┐
-          ▼                ▼                ▼
-┌──────────────┐ ┌──────────────┐ ┌──────────────┐
-│ Segmentation │ │   Funnels    │ │  A/B Testing │
-│ K-Means/RFM  │ │ Conversion   │ │ CUPED/Bayes  │
-│ DBSCAN/PCA   │ │ LogReg/Chi²  │ │ Bootstrap CI │
-└──────┬───────┘ └──────┬───────┘ └──────┬───────┘
-       │                │                │
-       ▼                ▼                ▼
-┌──────────────┐ ┌──────────────┐ ┌──────────────┐
-│ LTV Forecast │ │    Churn     │ │  Live-Ops    │
-│ Cox/XGB/BGNBD│ │ XGB+SHAP    │ │ Alerts/Recs  │
-└──────┬───────┘ └──────┬───────┘ └──────┬───────┘
-       │                │                │
-       └────────────────┼────────────────┘
-                        ▼
-         ┌──────────────────────────┐
-         │   STREAMLIT DASHBOARD    │
-         │  6 Tabs • KPI Cards •    │
-         │  Cohort Heatmaps • SHAP  │
-         └──────────────────────────┘
+```mermaid
+flowchart TB
+    subgraph SRC[Data Sources]
+        P[Players 310K]
+        IAP[IAP Transactions 35K]
+        AB[A/B Test 90K]
+    end
+    FE[Feature Engineering Pipeline<br/>59+ features: RFM, engagement, spending<br/>progression, demographics, retention<br/>SQL views: vw_daily_kpis, vw_cohort_retention]
+    SRC --> FE
+    FE --> SEG[Segmentation<br/>K-Means/RFM, DBSCAN/PCA]
+    FE --> FUNNEL[Funnels<br/>Conversion, LogReg/Chi²]
+    FE --> ABT[A/B Testing<br/>CUPED/Bayes, Bootstrap CI]
+    SEG --> LTV[LTV Forecast<br/>Cox/XGB/BGNBD]
+    FUNNEL --> CHURN[Churn<br/>XGB + SHAP]
+    ABT --> OPS[Live-Ops<br/>Alerts / Recs]
+    LTV --> DASH[Streamlit Dashboard<br/>6 tabs, KPI cards<br/>Cohort heatmaps, SHAP]
+    CHURN --> DASH
+    OPS --> DASH
 ```
 
 ---
@@ -184,7 +165,7 @@ Game-Monetization-LiveOps-Analytics/
 
 ---
 
-## 🔬 Methodology Deep Dive
+## Methodology Deep Dive
 
 ### Player Segmentation
 - **K-Means** with silhouette analysis (optimal k=3, silhouette=0.253)
@@ -209,7 +190,7 @@ Game-Monetization-LiveOps-Analytics/
 
 ---
 
-## 🎯 Gaming Domain Expertise
+## Gaming Domain Expertise
 
 This project uses the exact vocabulary and metrics that F2P game data science teams track:
 
